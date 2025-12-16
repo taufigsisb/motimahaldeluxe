@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motimahal Deluxe – Rourkela</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,216 +13,290 @@
         }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #ffffff;
-            color: #333333;
             line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        header {
-            background-color: #f8f8f8;
-            padding: 20px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #666666;
-        }
-        section {
-            padding: 60px 0;
-        }
-        section h2 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+        /* Hero Section */
         .hero {
-            background-color: #f0f0f0;
-            padding: 100px 0;
+            background: linear-gradient(135deg, #3e2723 0%, #ffd700 50%, #ff8c00 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+        .hero-content {
+            z-index: 2;
+            max-width: 600px;
         }
         .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         .hero p {
             font-size: 1.5rem;
-            font-weight: 400;
-            color: #666666;
+            margin-bottom: 30px;
+            font-weight: 300;
         }
-        .about-us p {
-            font-size: 1.1rem;
+        .cta-button {
+            background: #ffd700;
+            color: #3e2723;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background: #ff8c00;
+            transform: translateY(-5px);
+        }
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #3e2723;
+        }
+        /* About Us */
+        .about-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: center;
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
         }
-        .cuisine ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .cuisine li {
-            background-color: #f8f8f8;
-            padding: 15px 30px;
-            border-radius: 8px;
-            font-weight: 500;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .popular-dishes {
-            background-color: #f9f9f9;
-        }
-        .dishes-grid {
+        /* Cuisine */
+        .cuisine-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
+            gap: 30px;
         }
-        .dish {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
+        .cuisine-card {
+            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            font-weight: 500;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
+        .cuisine-card:hover {
+            transform: translateY(-10px);
+        }
+        .cuisine-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        /* Popular Dishes */
+        .dishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .dish-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .dish-card:hover {
+            transform: translateY(-10px);
+        }
+        .dish-card h4 {
+            color: #3e2723;
+            margin-bottom: 10px;
+        }
+        /* Location & Hours */
         .location-hours {
             display: flex;
-            justify-content: space-around;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 50px;
+            align-items: center;
         }
         .location, .hours {
             flex: 1;
-            min-width: 250px;
+            min-width: 300px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        .location h3, .hours h3 {
+            color: #3e2723;
+            margin-bottom: 20px;
+        }
+        /* Contact */
+        .contact-box {
+            background: linear-gradient(135deg, #3e2723 0%, #ffd700 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 40px;
             text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
-        .contact {
-            background-color: #f0f0f0;
+        .contact-box p {
+            margin-bottom: 10px;
         }
-        .contact p {
-            text-align: center;
-            font-size: 1.1rem;
-        }
+        /* Footer */
         footer {
-            background-color: #333333;
-            color: #ffffff;
+            background: #3e2723;
+            color: white;
             text-align: center;
             padding: 20px 0;
         }
+        /* Responsive */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header p {
-                font-size: 1rem;
-            }
             .hero h1 {
                 font-size: 2.5rem;
             }
             .hero p {
                 font-size: 1.2rem;
             }
-            section h2 {
-                font-size: 1.5rem;
+            .section-title {
+                font-size: 2rem;
             }
             .location-hours {
                 flex-direction: column;
+            }
+            .cuisine-grid, .dishes-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
+    <header class="hero">
+        <div class="hero-content">
             <h1>Motimahal Deluxe – Rourkela</h1>
             <p>Authentic North Indian & Mughlai Cuisine</p>
+            <a href="#contact" class="cta-button">Reserve a Table</a>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Motimahal Deluxe – Rourkela</h1>
-            <p>Authentic North Indian & Mughlai Cuisine</p>
+    <section id="about" class="container">
+        <h2 class="section-title">About Us</h2>
+        <div class="about-card">
+            <p>Motimahal Deluxe is a premium restaurant in Rourkela, Odisha, known for authentic North Indian, Mughlai, and Tandoori cuisine. We focus on rich flavors, quality ingredients, and a warm, family-friendly dining experience.</p>
         </div>
     </section>
 
-    <section class="about-us">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Motimahal Deluxe is a popular restaurant in Rourkela, Odisha, known for authentic North Indian, Mughlai, and Tandoori cuisine. The restaurant offers a family-friendly ambience, quality food, and excellent service.</p>
-        </div>
-    </section>
-
-    <section class="cuisine">
-        <div class="container">
-            <h2>Cuisine</h2>
-            <ul>
-                <li>North Indian</li>
-                <li>Mughlai</li>
-                <li>Tandoori</li>
-                <li>Biryani</li>
-                <li>Veg & Non-Veg</li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="popular-dishes">
-        <div class="container">
-            <h2>Popular Dishes</h2>
-            <div class="dishes-grid">
-                <div class="dish">Butter Chicken</div>
-                <div class="dish">Paneer Butter Masala</div>
-                <div class="dish">Dal Makhani</div>
-                <div class="dish">Tandoori Chicken</div>
-                <div class="dish">Biryani</div>
-                <div class="dish">Butter Naan</div>
+    <section id="cuisine" class="container">
+        <h2 class="section-title">Our Cuisine</h2>
+        <div class="cuisine-grid">
+            <div class="cuisine-card">
+                <h3>North Indian</h3>
+                <p>Traditional flavors from the heart of India.</p>
+            </div>
+            <div class="cuisine-card">
+                <h3>Mughlai</h3>
+                <p>Rich, royal dishes with aromatic spices.</p>
+            </div>
+            <div class="cuisine-card">
+                <h3>Tandoori</h3>
+                <p>Grilled to perfection in our clay oven.</p>
+            </div>
+            <div class="cuisine-card">
+                <h3>Biryani</h3>
+                <p>Fragrant rice dishes layered with meats and spices.</p>
+            </div>
+            <div class="cuisine-card">
+                <h3>Veg & Non-Veg</h3>
+                <p>Options for every palate, vegetarian and non-vegetarian.</p>
             </div>
         </div>
     </section>
 
-    <section class="location-hours">
-        <div class="container">
-            <h2>Location & Hours</h2>
-            <div class="location-hours">
-                <div class="location">
-                    <h3>Location</h3>
-                    <p>The Crossroad Mall, Near Railway Station, Udit Nagar, Rourkela, Odisha – 769001</p>
-                </div>
-                <div class="hours">
-                    <h3>Opening Hours</h3>
-                    <p>Monday to Sunday – 10:00 AM to 10:00 PM</p>
-                </div>
+    <section id="dishes" class="container">
+        <h2 class="section-title">Popular Dishes</h2>
+        <div class="dishes-grid">
+            <div class="dish-card">
+                <h4>Butter Chicken</h4>
+                <p>Creamy, tangy, and utterly delicious.</p>
+            </div>
+            <div class="dish-card">
+                <h4>Paneer Butter Masala</h4>
+                <p>Soft paneer in a rich tomato gravy.</p>
+            </div>
+            <div class="dish-card">
+                <h4>Dal Makhani</h4>
+                <p>Slow-cooked lentils with butter and cream.</p>
+            </div>
+            <div class="dish-card">
+                <h4>Tandoori Chicken</h4>
+                <p>Marinated and grilled to perfection.</p>
+            </div>
+            <div class="dish-card">
+                <h4>Chicken & Mutton Biryani</h4>
+                <p>Aromatic rice with tender meats.</p>
+            </div>
+            <div class="dish-card">
+                <h4>Butter Naan</h4>
+                <p>Soft, buttery flatbread.</p>
             </div>
         </div>
     </section>
 
-    <section class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Phone: +91 9XXXXXXXXX</p>
-            <p>Email: motimahaldeluxe.rkl@gmail.com</p>
+    <section id="location" class="container">
+        <h2 class="section-title">Location & Opening Hours</h2>
+        <div class="location-hours">
+            <div class="location">
+                <h3>Location</h3>
+                <p>The Crossroad Mall, Near Railway Station, Udit Nagar, Rourkela, Odisha – 769001</p>
+            </div>
+            <div class="hours">
+                <h3>Opening Hours</h3>
+                <p>Monday – Sunday<br>10:00 AM – 10:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-box">
+            <p><strong>Phone:</strong> +91 9XXXXXXXXX</p>
+            <p><strong>Email:</strong> motimahaldeluxe.rkl@gmail.com</p>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Motimahal Deluxe. All rights reserved.</p>
-        </div>
+        <p>&copy; 2023 Motimahal Deluxe. All rights reserved.</p>
     </footer>
 </body>
 </html>
