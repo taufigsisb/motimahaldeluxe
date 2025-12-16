@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motimahal Deluxe – Rourkela</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #666666;
+        }
+        section {
+            padding: 60px 0;
+        }
+        section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .hero {
+            background-color: #f0f0f0;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #666666;
+        }
+        .about-us p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .cuisine ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .cuisine li {
+            background-color: #f8f8f8;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .popular-dishes {
+            background-color: #f9f9f9;
+        }
+        .dishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .dish {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            font-weight: 500;
+        }
+        .location-hours {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .location, .hours {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+        .contact {
+            background-color: #f0f0f0;
+        }
+        .contact p {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+            section h2 {
+                font-size: 1.5rem;
+            }
+            .location-hours {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Motimahal Deluxe – Rourkela</h1>
+            <p>Authentic North Indian & Mughlai Cuisine</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Motimahal Deluxe – Rourkela</h1>
+            <p>Authentic North Indian & Mughlai Cuisine</p>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Motimahal Deluxe is a popular restaurant in Rourkela, Odisha, known for authentic North Indian, Mughlai, and Tandoori cuisine. The restaurant offers a family-friendly ambience, quality food, and excellent service.</p>
+        </div>
+    </section>
+
+    <section class="cuisine">
+        <div class="container">
+            <h2>Cuisine</h2>
+            <ul>
+                <li>North Indian</li>
+                <li>Mughlai</li>
+                <li>Tandoori</li>
+                <li>Biryani</li>
+                <li>Veg & Non-Veg</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="popular-dishes">
+        <div class="container">
+            <h2>Popular Dishes</h2>
+            <div class="dishes-grid">
+                <div class="dish">Butter Chicken</div>
+                <div class="dish">Paneer Butter Masala</div>
+                <div class="dish">Dal Makhani</div>
+                <div class="dish">Tandoori Chicken</div>
+                <div class="dish">Biryani</div>
+                <div class="dish">Butter Naan</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-hours">
+        <div class="container">
+            <h2>Location & Hours</h2>
+            <div class="location-hours">
+                <div class="location">
+                    <h3>Location</h3>
+                    <p>The Crossroad Mall, Near Railway Station, Udit Nagar, Rourkela, Odisha – 769001</p>
+                </div>
+                <div class="hours">
+                    <h3>Opening Hours</h3>
+                    <p>Monday to Sunday – 10:00 AM to 10:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Phone: +91 9XXXXXXXXX</p>
+            <p>Email: motimahaldeluxe.rkl@gmail.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Motimahal Deluxe. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
